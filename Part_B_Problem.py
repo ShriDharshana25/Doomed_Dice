@@ -1,12 +1,12 @@
 Die_A = [1,2,3,4,5,6]
 Die_B = [1,2,3,4,5,6]
-
+# Original Dice
 print("Original Dice A =", Die_A)
 print("Original Dice B =", Die_B)
 print("\nProbability of Original Dice :\n")
 
 total_combinations = len(Die_A) * len(Die_B)
-
+# Probability of all Possible Sums occurring among the number of combinations from two original dice ( DieA and DieB)
 original_sums = {}
 for i in range(len(Die_A)):
     for j in range(len(Die_B)):
@@ -22,6 +22,7 @@ new_sums = original_sums
 diceA = []
 diceB = []
 
+# DiceA Probability
 def diceA_possibility(number,t):    
     if number > 4:
         return
@@ -33,7 +34,8 @@ def diceA_possibility(number,t):
         return
     for i in range(number,5):          
         diceA_possibility(i,t.copy() + [i])
-    
+
+# DiceB Probability
 def diceB_possibility(number,t):
     if number > 11:
         return
@@ -45,7 +47,9 @@ def diceB_possibility(number,t):
         return
     for i in range(number+1,13):   
         diceB_possibility(i,t.copy()+[i])
-    
+
+# Probability of all Possible Sums occurring among the number of combinations from two new dice ( DiceA and DiceB)
+
 def undoom_dice():
     for i in range(1,5):
         diceA_possibility(i,[i])
