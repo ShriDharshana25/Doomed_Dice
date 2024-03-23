@@ -77,5 +77,5 @@ print("\nNew Dice A = ",New_Die_A)
 print("New Dice B = ",New_Die_B)
 print("\nProbability of New Dice :\n")
 
-for key,count in new_temp_dict.items():
-    print("P(Sum = ",key,") Count =",original_sums[key],"Probability = ",count,"/",total_combinations,"=",round(count/total_combinations,2))
+for sums,count in new_temp_dict.items():
+    print("P(Sum = ",sums,") Count =",original_sums[sums],"Probability = ",count,"/",total_combinations,"=",round(count/total_combinations,2))
