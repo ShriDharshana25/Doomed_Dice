@@ -22,7 +22,7 @@ new_sums = original_sums
 diceA = []
 diceB = []
 
-# DiceA Probability
+# DiceA possibility
 def diceA_possibility(number,t):    
     if number > 4:
         return
@@ -35,7 +35,7 @@ def diceA_possibility(number,t):
     for i in range(number,5):          
         diceA_possibility(i,t.copy() + [i])
 
-# DiceB Probability
+# DiceB possibility
 def diceB_possibility(number,t):
     if number > 11:
         return
